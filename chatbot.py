@@ -23,7 +23,7 @@ def handle_conversation():
         if user_input.lower() == 'exit':
             break
         result = chain.invoke({"history": history, "question": user_input})
-        print("Bot: ", result)
+        print("AIBot: ", result)
         history+= f"\nUser: {user_input}\nAI: {result}"
 
 if __name__ == "__main__":
